@@ -12,6 +12,7 @@ if(isset($_POST['post'])){
 }
 
 ?>
+
 <body>
 
 	<div class="user_details column">

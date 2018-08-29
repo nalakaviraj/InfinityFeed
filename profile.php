@@ -83,28 +83,62 @@ if(isset($_GET['profile_username'])){
 				else{
 
 					echo '<input type="submit" name="add_friend" class="success" value="Add Friend"> <br>';
-
-				}
-
-			
+			}
+		
 			}  
- 
- 
+  			?>
+  			</form>
 
-			?>
-		</form>
-
-
+  			<input type="submit" class="deep_blue" data-toggle="modal" data-target="#post_form" value="Post Something" >
+	
 	</div>
 
 
 	<div class="main_column">
 
-		<?php echo $username;?>
+		 <?php echo $username;?>
 
-		
+	  
 
-	</div>
+	</div> 
+
+	<!-- Button trigger modal -->
+
+<!-- Modal -->
+<div class="modal fade" id="post_form" tabindex="-1" role="dialog" aria-labelledby="PostModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+
+
+      <div class="modal-header">
+        <h5 class="modal-title" id="PostModalLabel">Post Something</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+
+      <div class="modal-body">
+        <p>This will apear on the user profile page and newsfeed</p>
+
+        <form class="profile_post" action="" method="POST">
+        	<div class="form-group">
+        		<textarea class="form-control" name="post_body"></textarea>
+        		<iput type="hidden" name="user_from" value="<?php echo $userLoggedIn;?>">
+        		<iput type="hidden" name="user_from" value="<?php echo $username;?>">
+
+        	</div>
+        </form>
+      </div>
+
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" id="submit_profile_post">Post</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 

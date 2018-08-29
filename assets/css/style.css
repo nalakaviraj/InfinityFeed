@@ -288,7 +288,7 @@ margin: 0;
 
 
 .comment_like{ 
-	
+
 
 	background-color: #fff;
     border: none;
@@ -385,4 +385,29 @@ margin: 0;
     margin: 7px 0 0 7px;
     border:none;
     color:#fff;
+}
+
+#accept_button{
+
+	width:20%;
+	height: 28px;
+	border-radius: 5px;
+	margin: 5px;
+	border:none;
+	color: #fff;
+	background-color: #2ecc71;
+}
+
+#ignore_button{
+
+	width:20%;
+	height: 28px;
+	border-radius: 5px;
+	margin: 5px;
+	border:none;
+	color: #fff;
+	background-color: #e74c3c;
+}
+
+
 }

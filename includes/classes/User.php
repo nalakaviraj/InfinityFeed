@@ -57,7 +57,7 @@ public function getFriendArray(){
 	return $row['friend_array'];
 
 
-}
+} 
 
 public function isClosed(){
 

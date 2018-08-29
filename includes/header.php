@@ -1,5 +1,5 @@
 <?php
-require'config/config.php';
+require'config/config.php'; 
 include("includes/classes/User.php");
 include("includes/classes/Post.php");
 
@@ -30,7 +30,9 @@ else{
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=EB+Garamond" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Russo+One" rel="stylesheet">
+	
 	<script src="assets/js/bootstrap.js"></script>
+	<script src="assets/js/infinityfeed.js"></script>
 </head>
 
 <body>

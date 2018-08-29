@@ -95,7 +95,7 @@ while($row = mysqli_fetch_array($data_query)) {
 
 						if($num_iterations++ < $start)
 							continue;
-
+ 
 						//Once 10 posts have been loaded, break
 						if($count > $limit){ 
 							break;

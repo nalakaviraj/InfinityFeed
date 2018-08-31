@@ -90,13 +90,25 @@ if(isset($_GET['profile_username'])){
   			</form>
 
   			<input type="submit" class="deep_blue" data-toggle="modal" data-target="#post_form" value="Post Something" >
+
+  			<?php
+
+  			if(!($userLoggedIn==$username)){ //Mutual friends calcualtion
+
+
+
+  				echo "<div class='profile_info_bottom'>".$logged_in_user_obj->getMutualFriends($username)." Mutual Friends"."</div>";
+  			}
+
+  			?> 
 	
 	</div>
 
 
-	<div class="main_column">
+	<div class="profile_main_column">
 
-		 <?php echo $username;?>
+		<div class="posts_area"></div>
+			<img id="#loading" src="assets/images/icons/loading.gif">
 
 	  
 
@@ -155,7 +167,7 @@ if(isset($_GET['profile_username'])){
 
 	 			$.ajax({
 
-	 				url:"includes/handlers/ajax_load_profle_posts.php",
+	 				url:"includes/handlers/ajax_load_profile_posts.php",
 	 				type:"POST",
 	 				data:"page=1&userLoggedIn="+ userLoggedIn + "&profileUsername=" + profileUsername,
 	 				cache:false,

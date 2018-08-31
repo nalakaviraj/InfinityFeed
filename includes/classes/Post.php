@@ -261,7 +261,7 @@ class Post {
 	}
 
 
-	public function loadProfilePosts($data, $limit) {
+	public function loadPrfilePosts($data, $limit) {
 
 		$page = $data['page']; 
 		$profileUser = $data['profileUsername'];
@@ -423,9 +423,9 @@ class Post {
 
 							</div>
 							<div class='post_comment' id='toggleComment$id' style='display:none;'>
-								<iframe src='comment_frame.php?post_id=$id' id='comment_iframe' frameborder='0'></iframe>
+								<iframe src='comments_frame.php?post_id=$id' id='comment_iframe' frameborder='0'></iframe>
 							</div>
-							<hr>";
+							<hr>"; 
 
 				?>
 				<script>
@@ -462,6 +462,8 @@ class Post {
 
 
 	}
+
+
 
 
 

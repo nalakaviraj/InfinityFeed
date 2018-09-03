@@ -2,6 +2,8 @@
 require'config/config.php'; 
 include("includes/classes/User.php");
 include("includes/classes/Post.php");
+include("includes/classes/Message.php");
+
 
 
 
@@ -32,10 +34,12 @@ else{
 	<script src="assets/js/bootbox.min.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=EB+Garamond" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Russo+One" rel="stylesheet">
+	<link rel="stylesheet" href="assets/css/jquery.Jcrop.css" type="text/css" />
 	
 	<script src="assets/js/bootstrap.js"></script>
-	
 	<script src="assets/js/infinityfeed.js"></script>
+	<script src="assets/js/jquery.jcrop.js"></script>
+	<script src="assets/js/jcrop_bits.js"></script>
 </head>
 
 <body>

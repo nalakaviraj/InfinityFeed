@@ -1,3 +1,4 @@
+<html>
 <?php
 include("includes/header.php");
 
@@ -37,8 +38,8 @@ if(isset($_POST['post'])){
 		<form class="post_form" action="index.php" method="POST">
 
 
-				<textarea name="post_text" id="post_text" placeholder="What's on your mind ?">
-					</textarea>
+				<textarea name="post_text" id="post_text" placeholder="What's on your mind ?"></textarea>
+
 
 			<input type="submit" name="post" id="post_button" value="Post"><hr>
 
@@ -50,13 +51,13 @@ if(isset($_POST['post'])){
 
 
 			<div class="posts_area"></div>
-			<img id="#loading" src="assets/images/icons/loading.gif">
+			<img id="loading" src="assets/images/icons/loading.gif">
 
 
 
 	</div>
 
-	 <script >
+	 <script>
 	 	
 	 	var userLoggedIn='<?php echo $userLoggedIn;?>';
 
@@ -126,3 +127,5 @@ if(isset($_POST['post'])){
 </div>
 
 </body>
+
+</html>

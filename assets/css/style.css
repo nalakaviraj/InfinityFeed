@@ -431,8 +431,62 @@ margin: 0;
 
 }
 
+.form-control textarea{
+
+	width: 100%px!important;
+}
+
 
 .profile_info_bottom{
 
 	margin: 10 0 0 7px;
+}
+
+
+
+#message_textarea{
+
+	width: 80%;
+	margin-right: 8px;
+	border-radius: 5px;
+	border:1px solid #D3D3D3;
+	font-size: 12px;
+
+}
+
+#message_submit{
+
+	height: 50px;
+	width: 120px;
+	margin: 0;
+	position: absolute;
+	border:none;
+	background-color: #20AAE5;
+	font-family: 'Bellota-BoldItalic',sans-serif;
+	color: #fff;
+	text-shadow: #7386E2 0.5px 0.5px 0px;
+	border-radius: 5px;
+}
+
+.message{
+
+	border:1px solid #000;
+	border-radius: 5px;
+	padding: 5px 10px;
+	display: inline-block;
+	color:#fff;
+}
+
+.message#blue{
+background-color:#3498db;
+border-color:#2980b9;
+float:right;
+margin-bottom:5px;
+}
+
+.message#green{
+background-color:#2ecc71;
+border-color:#27ae60;
+float:right;
+margin-bottom:5px;
 }

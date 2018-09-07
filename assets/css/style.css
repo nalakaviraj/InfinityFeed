@@ -142,8 +142,8 @@ nav a:hover{
 	float: right;
 	width: 70%;
 	z-index: -1;
-	min-height: 160px;
-	border-radius: 5px;
+	min-height: 170px;
+	border-radius: 5px;ss
 }
 
 .post_form{
@@ -525,4 +525,53 @@ margin-bottom:5px;
 
 #grey{
 	color: grey;
+}
+
+.resultDisplay{
+
+	padding: 5px 5px 0 5px;
+	height: 60px;
+	border-bottom: 1px solid #D3D3D3;
+}
+
+.resultDisplay a{
+
+	float: none;
+}
+
+.resultDisplay:hover{
+
+	background-color: #EBEBEB;
+	text-decoration: none;
+
+}
+
+.liveSearchProfilePic img{ 
+
+	height: 40px;
+	border-radius: 5px;
+	margin: 1px 12px 0 2px;
+	float: left;
+}
+
+
+.liveSearchText{
+
+		background-color: transparent;
+		color: #1E96CA;
+}
+
+
+.liveSearchText p{
+
+	margin-left: 10px;
+	font-size: 12px;
+
+
+}
+
+
+.tab-content{
+
+	margin-top: 25px;
 }

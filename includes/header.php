@@ -31,14 +31,14 @@ else{
 	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=EB+Garamond" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Russo+One" rel="stylesheet">
+	<link rel="stylesheet" href="assets/css/jquery.Jcrop.css" type="text/css" />
 	
 
 	<!--Javascript-->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script  src="assets/js/bootbox.min.js"></script>
-	<link href="https://fonts.googleapis.com/css?family=EB+Garamond" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Russo+One" rel="stylesheet">
-	<link rel="stylesheet" href="assets/css/jquery.Jcrop.css" type="text/css" />
 	<script src="assets/js/bootstrap.js"></script>
 	<script src="assets/js/infinityfeed.js"></script>
 	<script src="assets/js/jquery.jcrop.js"></script>
@@ -57,14 +57,18 @@ else{
 
 		<nav>
 			<a href="<?php echo $user['first_name']?>"><?php echo $user['first_name']?></a>
-			<a href="#"><i class="fas fa-envelope"></i></a>
+			<a href="Javascript:void(0);" onclick="getDropDownData('<?php echo $userLoggedIn;?>','message')"><i class="fas fa-envelope"></i></a>
 			<a href="index.php"><i class="fas fa-home"></i></a>
 
 			<a href="#"><i class="far fa-bell"></i></a>
 			<a href="requests.php"><i class="fas fa-user"></i></a>
 			<a href="#"><i class="fas fa-cog"></i></a>
 			<a href="includes/handlers/logout.php"><i class="fas fa-sign-out-alt"></i></a>
+		</nav>
 
+		<div class="dropdown_data_window"></div>
+		<input type="hidden" id="dropdown_data_type" value="">
+ 
 	</div>
 
 	<div class="wrapper">

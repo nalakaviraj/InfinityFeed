@@ -66,7 +66,7 @@ else{
 			<a href="includes/handlers/logout.php"><i class="fas fa-sign-out-alt"></i></a>
 		</nav>
 
-		<div class="dropdown_data_window"></div>
+		<div class="dropdown_data_window" style="height: 0px; border:none;"></div>
 		<input type="hidden" id="dropdown_data_type" value="">
  
 	</div>

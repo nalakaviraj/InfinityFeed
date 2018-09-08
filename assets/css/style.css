@@ -480,7 +480,7 @@ margin: 0;
 .message#blue{
 background-color:#3498db;
 border-color:#2980b9;
-float:right;
+float:left;
 margin-bottom:5px;
 }
 
@@ -574,4 +574,19 @@ margin-bottom:5px;
 .tab-content{
 
 	margin-top: 25px;
+}
+
+.dropdown_data_window{
+
+	/*height: 280px;
+	padding: 0px;*/
+	background-color: #fff;
+	border:1px solid #DADADA;
+	border-radius: 0 0 8px 8px;
+	border-top: none;
+	width: 300px;
+	position: absolute;
+	right: 10px;
+	top:40px;
+	overflow: scroll;
 }

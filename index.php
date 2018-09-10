@@ -91,7 +91,7 @@ if(isset($_POST['post'])){
 	 		var scroll_top=$(this).scrollTop();
 	 		var page=$('.posts_area').find('.nextPage').val();
 	 		var noMorePosts=$('.posts_area').find('.noMorePosts').val();
-	 		 if((document.body.scrollHeight==document.body.scrollTop + window.innerHeight) && noMorePosts=='false')//Hello future nalaka, How are things in the new office, and did you buy a new phone , By the way this piece of code checks whether the scroll button is in the end of the browser scroll bar and whether there are more posts
+	 		 if((document.body.scrollHeight==document.body.scrollTop + window.innerHeight) && noMorePosts=='false')//Hello future nalaka, How are things in the  office, and did you buy a new phone , By the way this piece of code checks whether the scroll button is in the end of the browser scroll bar and whether there are more posts
 	 		 {
 	 		 	$('#loading').show();
 	 		 	

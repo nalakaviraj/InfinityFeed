@@ -15,12 +15,15 @@
 	position: absolute;
 	top:0;
 }
-</style>
+</style> 
 
 <?php
 		require'config/config.php';
 		include("includes/classes/User.php");
 		include("includes/classes/Post.php");
+		include("includes/classes/Notification.php");
+
+
 		//Checking whether is user is logged in if not direct to register page
 		if(isset($_SESSION['username'])){
 		$userLoggedIn=$_SESSION['username'];
@@ -50,6 +53,13 @@
 			$user_likes=mysqli_query($con,"UPDATE users SET num_likes='$total_user_likes' WHERE username='$user_liked'");
 			$insert_user=mysqli_query($con,"INSERT INTO likes VALUES ('','$userLoggedIn','$post_id')");
 			//Insert notification
+			if($user_liked != $userLoggedIn ){
+
+				$notification=new Notification($con,$userLoggedIn);
+				$notification->insertNotification($post_id,$user_liked,"like");
+
+			}
+
 		}
 		//Unlike Button
 		if(isset($_POST['unlike_button'])){
@@ -59,6 +69,7 @@
 			$user_likes=mysqli_query($con,"UPDATE users SET num_likes='$total_user_likes' WHERE username='$user_liked'");
 			$insert_user=mysqli_query($con,"DELETE  FROM likes WHERE username='$userLoggedIn' AND post_id='$post_id'");
 			//Insert notification
+
 		}
 		//check for previous likes
 			$check_query=mysqli_query($con,"SELECT * FROM likes WHERE username='$userLoggedIn' AND post_id='$post_id'");

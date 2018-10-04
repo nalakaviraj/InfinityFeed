@@ -67,7 +67,7 @@ else{
 				$notifications=new Notification($con,$userLoggedIn);
 				$num_notifications=$notifications->getUnreadNumber();
 			?>
-			<a href="<?php echo $user['first_name']?>"><?php echo $user['first_name']?></a>
+			<a href="<?php echo $user['username']?>"><?php echo $user['first_name'] . " " . $user['last_name'];?></a>
 			<a href="Javascript:void(0);" onclick="getDropDownData('<?php echo $userLoggedIn;?>','message')"><i class="fas fa-envelope"></i>
 				<?php
 				if($num_messages > 0)
@@ -108,6 +108,8 @@ else{
 			if ((scroll_top + inner_height >= $('.dropdown_data_window')[0].scrollHeight) && noMoreData == 'false') {
 
 				var pageName; //Holds name of page to send ajax request to
+
+				
 				var type = $('#dropdown_data_type').val();
 
 

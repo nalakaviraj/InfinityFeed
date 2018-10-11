@@ -56,6 +56,22 @@ else{
 			<a href="index.php">INFINITY FEED</a>
 
 		</div> 
+ 
+		<div class="search">
+			<form action="search.php" method="GET" name="search_form">
+				<input type="text" onkeyup="getLiveSearchUsers(this.value,'<?php echo $userLoggedIn;?>" name="query" placeholder="Search..." autocomplete="off" id="search_text_input">
+				<div class="button_holder">
+				<img src="assets/images/icons/magnifying_glass.png">
+				</div>
+			</form>
+			<div class="search_results">
+				
+			</div>
+
+			<div class="search_results_footer_empty">
+				
+			</div>
+		</div>
 
 		<nav>
 			<?php
@@ -64,8 +80,11 @@ else{
 				$num_messages=$messages->getUnreadNumber();
 
 				//Unread notifications
-				$notifications=new Notification($con,$userLoggedIn);
+				$notifications=new Notification($con,$userLoggedIn); 
 				$num_notifications=$notifications->getUnreadNumber();
+
+				$user_obj=new User($con,$userLoggedIn);
+				$num_requests=$user_obj->getNumberOfFriendRequests();
 			?>
 			<a href="<?php echo $user['username']?>"><?php echo $user['first_name'] . " " . $user['last_name'];?></a>
 			<a href="Javascript:void(0);" onclick="getDropDownData('<?php echo $userLoggedIn;?>','message')"><i class="fas fa-envelope"></i>
@@ -84,7 +103,14 @@ else{
 				?>
 
 			</a>
-			<a href="requests.php"><i class="fas fa-user"></i></a>
+			<a href="requests.php"><i class="fas fa-user"></i>
+
+				<?php
+				if($num_requests > 0)
+				echo '<span class="notification_badge" id="undread_requests">'.$num_requests.'</span>';
+				?>
+
+			</a>
 			<a href="#"><i class="fas fa-cog"></i></a>
 			<a href="includes/handlers/logout.php"><i class="fas fa-sign-out-alt"></i></a>
 		</nav>

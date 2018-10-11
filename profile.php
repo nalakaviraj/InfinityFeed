@@ -8,8 +8,13 @@ if(isset($_GET['profile_username'])){
 	$username=$_GET['profile_username'];
 	$user_details_query=mysqli_query($con,"SELECT * FROM users WHERE username='$username'");
 	$user_array=mysqli_fetch_array($user_details_query);
+
 	$num_friends=(substr_count($user_array['friend_array'],","))-1;
 }
+
+
+if($user_array > 0){  //checking whether there is a user as profile_username
+	
 
  if(isset($_POST['remove_friend'])){
 
@@ -52,10 +57,18 @@ if(isset($_GET['profile_username'])){
  		 </script>";
 
  }
- 
+ }
 
+ 
+else{//if there is no user as profile_user then return to index.php
+	
+	header("Location:index.php");
+			exit();
+}
 
 ?>
+
+
 <body>
 	<style type="text/css">
 
